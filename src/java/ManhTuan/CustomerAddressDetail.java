@@ -28,8 +28,9 @@ public class CustomerAddressDetail extends HttpServlet {
         String id = request.getParameter("id");
         int customerId = Integer.parseInt(id);
         ProductDAOTuan dao = new ProductDAOTuan();
-        AddressTuan address = dao.getCustomerAddressById(customerId);
-        request.setAttribute("address", address);
+        List<AddressTuan> address = dao.getCustomerAddressesById(customerId);
+        request.setAttribute("id", customerId);
+        request.setAttribute("addresses", address);
         request.getRequestDispatcher("ManhTuan/customeraddressdetail.jsp").forward(request, response);
     } 
 

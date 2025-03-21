@@ -129,39 +129,6 @@ public class UserDAO extends DBContext {
         return list;
     }
     
-    
-    
-    public List<UserTuan> getInforUserById(int id) {
-        List<UserTuan> list = new ArrayList<>();
-        String sql = "SELECT * FROM [RunnerShop].[dbo].[User] WHERE user_id = ?";
-
-        try (PreparedStatement ps = connection.prepareStatement(sql)) {
-            ps.setInt(1, id);
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    // Sử dụng constructor đầy đủ với tất cả các tham số
-                    UserTuan user = new UserTuan(
-                        rs.getInt("user_id"),           // userId
-                        rs.getInt("role_id"),           // roleId
-                        rs.getString("user_name"),      // userName
-                        rs.getString("full_name"),      // fullName
-                        rs.getString("email"),          // email
-                        rs.getString("password"),       // password
-                        rs.getString("phone_number"),   // phoneNumber
-                        rs.getBoolean("status"),        // status
-                        rs.getInt("gender_id"),         // genderId
-                        rs.getString("created_at"),     // createdAt
-                        rs.getString("img_user"),       // imgUser
-                        null                            // addresses (hiện tại không có thông tin địa chỉ)
-                    );
-                    list.add(user);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
 
 
     public boolean updateUserInfo(int userId, String email, String phoneNumber, String fullName) {
