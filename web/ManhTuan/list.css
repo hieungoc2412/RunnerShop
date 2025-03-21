@@ -1,0 +1,173 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 11, 2025, 6:11:55 AM
+    Author     : tuan
+*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.type{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #e1e3f5;
+    color: #101010;
+    justify-content: center;
+    padding: 2px 8px;
+    font-size: 16px;
+    width: fit-content;
+}
+.type .content{
+    font-weight: 700;
+}
+
+.product {
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.product-price, .product-colors {
+    margin: 10px 0;
+}
+.product-rating {
+    color: #888;
+}
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.White {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Black {
+    background-color: black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.BLue {
+    background-color: blue;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Green {
+    background-color: green;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Red {
+    background-color: red;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Purple {
+    background-color: purple;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Yellow {
+    background-color: yellow;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Gray {
+    background-color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Pink {
+    background-color: pink;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Blush {
+    background-color: #de5d83;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.Orange{
+    background-color: orange;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.category-tree {
+    list-style-type: none;
+}
+.category-tree li {
+    margin: 5px 0;
+}
+
+.sub-category {
+    display: none;
+    padding-left: 20px;
+}
+
+
+li:hover > .sub-category {
+    display: block;
+}
+
+.category-link {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+}
+
+.category-link:hover {
+    color: red;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+
+li > .sub-category {
+    padding-left: 20px;
+}
+
+.slider-container {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+#slider {
+    width: 300px !important; /* Điều chỉnh độ dài */
+    margin: 20px 0;
+    height: 8px; /* Chiều cao của thanh */
+}
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.price-values span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.noUi-handle {
+    width: 5px; /* Kích thước tay kéo */
+    height: 5px;
+    top: -4px; /* Canh giữa theo chiều dọc */
+    border-radius: 50%;
+}
